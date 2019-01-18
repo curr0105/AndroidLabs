@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab1</string>
+    <string name="app_name">Lab 2</string>
     <string name="hello_message">Here are my widgets:</string>
     <string name="button">BUTTON</string>
     <string name="checkBox">Check this out!</string>
     <string name="switchToggle">Switch on / off</string>
     <string name="hint">Type your answer here</string>
+    <string name="flag">flag</string>
 </resources>

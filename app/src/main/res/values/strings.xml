@@ -5,4 +5,6 @@
     <string name="checkBox">Check this out!</string>
     <string name="switchToggle">Switch on / off</string>
     <string name="hint">Type your answer here</string>
+    <string name="flag">flag</string>
+
 </resources>

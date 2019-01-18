@@ -4,7 +4,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     >
 
     <EditText
@@ -14,11 +13,11 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/hello_message"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="136dp"
+        android:layout_height="136sp"
         android:orientation="horizontal">
 
         <Button
@@ -30,6 +29,7 @@
             android:text="@string/button" />
 
         <ImageButton
+            android:contentDescription="@string/flag"
             android:id="@+id/imageButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="48sp"
         android:orientation="horizontal">
 
         <CheckBox
@@ -62,7 +62,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="551dp"
+        android:layout_height="551sp"
         android:orientation="vertical" >
 
         <android.support.design.widget.TextInputLayout
@@ -71,7 +71,7 @@
 
             <android.support.design.widget.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="73dp"
+                android:layout_height="73sp"
                 android:hint="@string/hint" />
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
