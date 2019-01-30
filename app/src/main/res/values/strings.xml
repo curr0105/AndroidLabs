@@ -1,10 +1,20 @@
 <resources>
-    <string name="app_name">Lab 2</string>
+    <string name="app_name">Lab 3</string>
     <string name="hello_message">Here are my widgets:</string>
     <string name="button">BUTTON</string>
     <string name="checkBox">Check this out!</string>
     <string name="switchToggle">Switch on / off</string>
     <string name="hint">Type your answer here</string>
-    <string name="flag">flag</string>
-
+    <string name="flag">US flag</string>
+    <string name="email_address">Enter your email address:</string>
+    <string name="hint_email">Type email here</string>
+    <string name="password">Type your password:</string>
+    <string name="your_profile">Your profile</string>
+    <string name="your_name">Your name:</string>
+    <string name="hint_your_name">Enter your name</string>
+    <string name="your_email">Your email:</string>
+    <string name="hint_your_email">Enter your email</string>
+    <string name="your_picture">Your picture:</string>
+    <string name="click_take_pic">Click the button above to take a picture</string>
+    <string name="login_button">LOGIN</string>
 </resources>

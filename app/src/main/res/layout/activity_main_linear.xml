@@ -25,7 +25,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="fill"
             android:text="@string/button" />
 
         <ImageButton
@@ -40,7 +39,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="48sp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <CheckBox
