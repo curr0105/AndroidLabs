@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         email = (EditText)findViewById(R.id.thisEmailIsPassedToPage2);
         sp = getSharedPreferences("Lab3", Context.MODE_PRIVATE);
-        String savedString = sp.getString("Email", "0");
-
+        String savedString = sp.getString("Email","");
         email.setText(savedString);
         Log.e(ACTIVITY_NAME, "In Function onCreate() in MainActivity:");
 

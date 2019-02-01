@@ -1,11 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab 3</string>
+    <string name="app_name">Lab 3 - English</string>
     <string name="hello_message">Here are my widgets:</string>
     <string name="button">BUTTON</string>
     <string name="checkBox">Check this out!</string>
     <string name="switchToggle">Switch on / off</string>
     <string name="hint">Type your answer here</string>
-    <string name="flag">US flag</string>
+    <string name="flag">Canadian flag</string>
     <string name="email_address">Enter your email address:</string>
     <string name="hint_email">Type email here</string>
     <string name="password">Type your password:</string>
