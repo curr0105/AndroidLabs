@@ -21,6 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profileactivity);
+        this.setTitle("Lab 3 - ProfileActivity");
         Log.e(ACTIVITY_NAME, "In Function onCreate() in ProfileActivity:");
 
         Intent fromPrevious = getIntent();
