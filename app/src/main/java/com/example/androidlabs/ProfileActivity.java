@@ -7,13 +7,17 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Button;
+
 
 public class ProfileActivity extends AppCompatActivity {
 
     private SharedPreferences sp;
     private ImageButton mImageButton;
+    private Button chatButton;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
     public static final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -33,6 +37,14 @@ public class ProfileActivity extends AppCompatActivity {
         mImageButton = (ImageButton) this.findViewById(R.id.imageButton);
         mImageButton.setOnClickListener(bt -> {
                dispatchTakePictureIntent();
+        });
+        chatButton = (Button) this.findViewById(R.id.goToChatButton);
+        chatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent chat = new Intent(ProfileActivity.this,ChatRoomActivity.class);
+                startActivity(chat);
+            }
         });
     }
 

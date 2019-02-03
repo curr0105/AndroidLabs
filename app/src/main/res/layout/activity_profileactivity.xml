@@ -64,4 +64,12 @@
         android:text="@string/click_take_pic"
         android:textSize="18sp"/>
 
+    <Button
+        android:id="@+id/goToChatButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/GoToChatButton" />
+
+
 </LinearLayout>
