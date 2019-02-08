@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        this.setTitle("Lab 3 - MainActivity");
+        this.setTitle("Lab 4 - Login");
 
         email = (EditText)findViewById(R.id.thisEmailIsPassedToPage2);
         sp = getSharedPreferences("Lab3", Context.MODE_PRIVATE);

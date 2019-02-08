@@ -2,7 +2,6 @@ package com.example.androidlabs;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,45 +9,38 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.BaseAdapter;
-import android.widget.AdapterView;
-import android.util.Log;
 import android.widget.TextView;
-import android.content.Context;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class ChatRoomActivity extends AppCompatActivity {
 
-    //create an arraylist that stores Messages object
-    //Messages object contains a String for the message and a type for whether its send or receive
+    //create an arraylist that stores the Messages object
+    //Messages object contains a String for the message and a type (0 = receive,1 = send)
     final ArrayList<Messages> messageList = new ArrayList<Messages>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatroom);
-        setTitle("ChatRoom");
+        setTitle("Lab 4 - ChatRoom");
 
-        //call all four elements from the activity_chatroom xml file
+        //call all four elements from the activity_chatroom.xml file
         ListView listView = findViewById(R.id.messages_view);
         Button send = findViewById(R.id.SendButton);
         EditText editText = findViewById(R.id.editText);
         Button receive = findViewById(R.id.ReceiveButton);
 
 
-        //This class needs 4 functions to work properly:
-        //ArrayAdapter -- look it up
-        //this adapater is being dropped inside the Listview
+        //This class needs 4 functions to work properly (use Ctrl + O to see them all):
+        //ArrayAdapter -- used by Android to treat a result set uniformly so that it can be
+        // displayed in a UI element. It stores the data in a list
+        //This adapater is being dropped inside the Listview
         class ChatRoomAdapter extends ArrayAdapter<String> {
 
-            //create constructor with the parameter Context - look it up
+            //create constructor with the parameter Context - It tells the compiler to which
+            // context activity or application your current belongs to which you want to show.
             public ChatRoomAdapter(Context context) {
                 super(context, 0);
             }
@@ -81,9 +73,12 @@ public class ChatRoomActivity extends AppCompatActivity {
             }
 
             @Override
-            //where the complexity goes - what is going to happen in the screen
+            //what is going to happen in the screen
             public View getView(int position, View convertView, ViewGroup parent) {
                 //this is where you call the layout inflators (chatroom_send, chatroom_receive)
+                //When you use a custom view in a ListView you must define the row layout.\
+                // You create an xml where you place android widgets and then in the adapter's
+                // code you have to do something
                 LayoutInflater inflator = ChatRoomActivity.this.getLayoutInflater();
                 //create a placeholder for the view that is going to be inflated
                 View result = null;
