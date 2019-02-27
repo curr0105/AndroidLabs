@@ -2,9 +2,11 @@ package com.example.androidlabs;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -26,8 +28,8 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profileactivity);
         this.setTitle("Lab 4 - Profile");
-        Log.e(ACTIVITY_NAME, "In Function onCreate() in ProfileActivity:");
 
+        MyDatabaseOpenHelper myDb = new MyDatabaseOpenHelper(this);
         Intent fromPrevious = getIntent();
         String previousTyped = fromPrevious.getStringExtra("typed");
 
@@ -48,6 +50,7 @@ public class ProfileActivity extends AppCompatActivity {
         });
     }
 
+
     private void dispatchTakePictureIntent(){
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
@@ -67,31 +70,31 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        Log.e(ACTIVITY_NAME, "In Function onPause():");
+    //    Log.e(ACTIVITY_NAME, "In Function onPause():");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.e(ACTIVITY_NAME, "In Function onDestroy():");
+    //    Log.e(ACTIVITY_NAME, "In Function onDestroy():");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.e(ACTIVITY_NAME, "In Function onStop():");
+    //    Log.e(ACTIVITY_NAME, "In Function onStop():");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.e(ACTIVITY_NAME, "In Function onResume():");
+    //    Log.e(ACTIVITY_NAME, "In Function onResume():");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.e(ACTIVITY_NAME, "In Function onStart():");
+    //    Log.e(ACTIVITY_NAME, "In Function onStart():");
     }
 
 }

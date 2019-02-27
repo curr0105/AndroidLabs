@@ -12,6 +12,7 @@ import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
+
     SharedPreferences sp;
     EditText email;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         sp = getSharedPreferences("Lab3", Context.MODE_PRIVATE);
         String savedString = sp.getString("Email","");
         email.setText(savedString);
-        Log.e(ACTIVITY_NAME, "In Function onCreate() in MainActivity:");
+        //Log.e(ACTIVITY_NAME, "In Function onCreate() in MainActivity:");
 
         Button login = (Button)findViewById(R.id.loginButton);
         login.setOnClickListener(new View.OnClickListener() {
