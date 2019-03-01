@@ -55,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick = "takePicture"
+        android:contentDescription="Your picture"
         android:src="@android:drawable/picture_frame" />
 
     <TextView
@@ -71,5 +72,11 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/GoToChatButton" />
 
+    <Button
+        android:id="@+id/goToToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/goToToolBar"/>
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.androidlabs;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -8,16 +9,20 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private SharedPreferences sp;
     private ImageButton mImageButton;
     private Button chatButton;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
@@ -27,20 +32,20 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profileactivity);
-        this.setTitle("Lab 4 - Profile");
+        this.setTitle("Lab 6 - Profile");
 
         MyDatabaseOpenHelper myDb = new MyDatabaseOpenHelper(this);
         Intent fromPrevious = getIntent();
         String previousTyped = fromPrevious.getStringExtra("typed");
 
-        EditText enterText = (EditText) findViewById(R.id.editText6);
+        EditText enterText = findViewById(R.id.editText6);
         enterText.setText(previousTyped);
 
-        mImageButton = (ImageButton) this.findViewById(R.id.imageButton);
+        mImageButton = this.findViewById(R.id.imageButton);
         mImageButton.setOnClickListener(bt -> {
                dispatchTakePictureIntent();
         });
-        chatButton = (Button) this.findViewById(R.id.goToChatButton);
+        chatButton = this.findViewById(R.id.goToChatButton);
         chatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,8 +53,15 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(chat);
             }
         });
-    }
-
+        Button toolBarPage = findViewById(R.id.goToToolBar);
+        toolBarPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tb = new Intent (ProfileActivity.this, TestToolBar.class);
+                startActivity(tb);
+            }
+        });
+   }
 
     private void dispatchTakePictureIntent(){
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

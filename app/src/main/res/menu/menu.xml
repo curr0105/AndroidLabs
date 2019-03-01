@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/item1"
+        android:title="@string/arrivals"
+        android:icon="@drawable/ap_land"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/item2"
+        android:title="@string/departures"
+        android:icon="@drawable/ap_takeoff"
+        android:orderInCategory="200"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/item3"
+        android:title="@string/airports"
+        android:icon="@drawable/airport"
+        android:orderInCategory="300"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/item4"
+        android:title="@string/flights"
+        android:text="@string/flights"
+        android:orderInCategory="400"
+        app:showAsAction="never"/>
+
+</menu>

@@ -41,7 +41,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatroom);
-        setTitle("Lab 4 - ChatRoom");
+        setTitle("Lab 6 - ChatRoom");
 
         //call all four elements from the activity_chatroom.xml file
         ListView listView = findViewById(R.id.messages_view);
@@ -111,7 +111,7 @@ public class ChatRoomActivity extends AppCompatActivity {
 
         //create constructor with the parameter Context - It tells the compiler to which
         // context activity or application your current belongs to which you want to show.
-        public ChatRoomAdapter(Context context) {
+        private ChatRoomAdapter(Context context) {
             super(context, 0);
         }
 
@@ -129,7 +129,7 @@ public class ChatRoomActivity extends AppCompatActivity {
             return messageList.get(position).message;
         }
 
-        public boolean getItemType(int position) {
+        private boolean getItemType(int position) {
             //goes to an element of the array in a specific position
             //returns the type at that position
             return messageList.get(position).type;
@@ -151,7 +151,7 @@ public class ChatRoomActivity extends AppCompatActivity {
             // code you have to do something
             LayoutInflater inflator = ChatRoomActivity.this.getLayoutInflater();
             //create a placeholder for the view that is going to be inflated
-            View result = null;
+            View result;
             //find out what type is in that position
             if (getItemType(position)) {
                 //if type is 1, then call the applicable xml file to send a message
@@ -188,8 +188,10 @@ public class ChatRoomActivity extends AppCompatActivity {
 
         for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()){
             result = result + c.getString(msg) + "\n";
+            c.close();
         }
         return result;
+
     }
 
     //this writes to the DB

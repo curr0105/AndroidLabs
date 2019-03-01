@@ -21,20 +21,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        this.setTitle("Lab 4 - Login");
+        this.setTitle("Lab 6 - Login");
 
-        email = (EditText)findViewById(R.id.thisEmailIsPassedToPage2);
+        email = findViewById(R.id.thisEmailIsPassedToPage2);
         sp = getSharedPreferences("Lab3", Context.MODE_PRIVATE);
         String savedString = sp.getString("Email","");
         email.setText(savedString);
         //Log.e(ACTIVITY_NAME, "In Function onCreate() in MainActivity:");
 
-        Button login = (Button)findViewById(R.id.loginButton);
+        Button login = findViewById(R.id.loginButton);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                EditText et = (EditText)findViewById(R.id.thisEmailIsPassedToPage2);
+                EditText et = findViewById(R.id.thisEmailIsPassedToPage2);
                 intent.putExtra("typed", et.getText().toString());
                 startActivityForResult(intent, 2);
             }
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         i++;
         //if request code is 2, then we are coming back from ProfileActivity
         if(requestCode == 2){
-            EditText et = (EditText)findViewById(R.id.thisEmailIsPassedToPage2);
+            EditText et = findViewById(R.id.thisEmailIsPassedToPage2);
             String fromProfile = data.getStringExtra("previousTyped");
             et.setText(fromProfile);
             Log.i("Back", "Message");
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         String whatWasTyped = email.getText().toString();
         editor.putString("Email", whatWasTyped);
 
-        editor.commit();
+        editor.apply();
     }
 
     @Override

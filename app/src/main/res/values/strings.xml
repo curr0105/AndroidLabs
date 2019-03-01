@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab 4 - English</string>
+    <string name="app_name">Lab 6 - English</string>
     <string name="hello_message">Here are my widgets:</string>
     <string name="button">BUTTON</string>
     <string name="checkBox">Check this out!</string>
@@ -22,4 +22,14 @@
     <string name="SendButton">Send</string>
     <string name="ReceiveButton">Receive</string>
     <string name="ChatTypeHere">Type here</string>
+
+    <string name="arrivals">Arrivals</string>
+    <string name="departures">Departures</string>
+    <string name="airports">Airports</string>
+    <string name="search">Search</string>
+    <string name="flights">Flights</string>
+    <string name="goToToolBar">Go to Toolbar page</string>
+    <string name="new_message">"What is your new message?"</string>
+    <string name="view_edit_text">Type here</string>
+
 </resources>
