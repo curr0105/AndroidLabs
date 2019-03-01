@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/msgEnterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/email_address" />
+
+    <EditText
+        android:id="@+id/thisEmailIsPassedToPage2"
+        android:name="@string/hint_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="20sp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/hint_email" />
+
+    <TextView
+        android:id="@+id/enterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button" />
+
+</LinearLayout>

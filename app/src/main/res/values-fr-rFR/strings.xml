@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab 6 - English</string>
+    <string name="app_name">Lab 6 - French</string>
     <string name="hello_message">Here are my widgets:</string>
     <string name="button">BUTTON</string>
     <string name="checkBox">Check this out!</string>
@@ -31,5 +31,11 @@
     <string name="goToToolBar">Go to Toolbar page</string>
     <string name="new_message">"What is your new message?"</string>
     <string name="view_edit_text">Type here</string>
+
+
+
+
+
+
 
 </resources>
