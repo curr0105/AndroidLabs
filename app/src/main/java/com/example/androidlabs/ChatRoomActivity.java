@@ -60,7 +60,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         while (data.moveToNext()) {
 
         //isSent method is converting the integer in the database back to true or false
-        messageList.add(new Messages(data.getString(data.getColumnIndex(myDb.COL_MESSAGE)),isSent(),
+        messageList.add(new Messages(data.getString(data.getColumnIndex(COL_MESSAGE)),isSent(),
                 data.getLong(data.getColumnIndex(COL_ID))));
         }
         //everytime you use a cursor (called "data" in this example) it needs to be shut down.
