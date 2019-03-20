@@ -26,16 +26,16 @@ public class ChatRoomActivity extends AppCompatActivity {
 
     //create an arraylist that stores the Messages object
     //Messages object contains a String for the message and a type (0 = receive,1 = send)
-    final ArrayList<Messages> messageList = new ArrayList<>();
-    static long id;
-    Cursor data;
-    MyDatabaseOpenHelper myDb;
-    SQLiteDatabase db;
-    protected static final String TAG = "Database Version";
-    protected static final String TAG1 = "Number of Columns";
-    protected static final String TAG2 = "Name of Column";
-    protected static final String TAG3 = "Number of Rows";
-    protected static final String TAG4 = "Messages";
+    private final ArrayList<Messages> messageList = new ArrayList<>();
+    private static long id;
+    private Cursor data;
+    private MyDatabaseOpenHelper myDb;
+    private SQLiteDatabase db;
+    private static final String TAG = "Database Version";
+    private static final String TAG1 = "Number of Columns";
+    private static final String TAG2 = "Name of Column";
+    private static final String TAG3 = "Number of Rows";
+    private static final String TAG4 = "Messages";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +63,7 @@ public class ChatRoomActivity extends AppCompatActivity {
         messageList.add(new Messages(data.getString(data.getColumnIndex(COL_MESSAGE)),isSent(),
                 data.getLong(data.getColumnIndex(COL_ID))));
         }
-        //everytime you use a cursor (called "data" in this example) it needs to be shut down.
+        //every time you use a cursor (called "data" in this example) it needs to be shut down.
         data.close();
 
         //instantiate ChatRoomAdapter
@@ -106,7 +106,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     //This class needs 4 functions to work properly (use Ctrl + O to see them all):
     //ArrayAdapter -- used by Android to treat a result set uniformly so that it can be
     // displayed in a UI element. It stores the data in a list
-    //This adapater is being dropped inside the Listview
+    //This adapter is being dropped inside the Listview
     class ChatRoomAdapter extends ArrayAdapter<String> {
 
         //create constructor with the parameter Context - It tells the compiler to which
@@ -145,19 +145,19 @@ public class ChatRoomActivity extends AppCompatActivity {
         @Override
         //what is going to happen in the screen
         public View getView(int position, View convertView, ViewGroup parent) {
-            //this is where you call the layout inflators (chatroom_send, chatroom_receive)
+            //this is where you call the layout inflaters (chatroom_send, chatroom_receive)
             //When you use a custom view in a ListView you must define the row layout.\
             // You create an xml where you place android widgets and then in the adapter's
             // code you have to do something
-            LayoutInflater inflator = ChatRoomActivity.this.getLayoutInflater();
+            LayoutInflater inflater = ChatRoomActivity.this.getLayoutInflater();
             //create a placeholder for the view that is going to be inflated
             View result;
             //find out what type is in that position
             if (getItemType(position)) {
                 //if type is 1, then call the applicable xml file to send a message
-                result = inflator.inflate(R.layout.chatroom_send, null);
+                result = inflater.inflate(R.layout.chatroom_send, null);
             } else {
-                result = inflator.inflate(R.layout.chatroom_receive, null);
+                result = inflater.inflate(R.layout.chatroom_receive, null);
             }
             //finding the textview of the inflated xml files
             TextView displayMessage = result.findViewById(R.id.chatTextView);
@@ -212,7 +212,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     }
 
     //converting the int value stored in the database to a true(sent) or false(received) in order for
-    // the app to know where to put the stored nessages
+    // the app to know where to put the stored messages
     private boolean isSent () {
         if (data.getInt(data.getColumnIndex(myDb.COL_TYPE)) == 1) {
             return true;

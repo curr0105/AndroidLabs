@@ -1,32 +1,22 @@
 package com.example.androidlabs;
 
-import android.content.DialogInterface;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Button;
-import android.widget.Toast;
 
 
 public class ProfileActivity extends AppCompatActivity {
 
     private ImageButton mImageButton;
-    private Button chatButton;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
-    public static final int REQUEST_IMAGE_CAPTURE = 1;
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +35,7 @@ public class ProfileActivity extends AppCompatActivity {
         mImageButton.setOnClickListener(bt -> {
                dispatchTakePictureIntent();
         });
-        chatButton = this.findViewById(R.id.goToChatButton);
+        Button chatButton = this.findViewById(R.id.goToChatButton);
         chatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +48,14 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent tb = new Intent (ProfileActivity.this, TestToolBar.class);
+                startActivity(tb);
+            }
+        });
+        Button weatherPage = findViewById(R.id.goToWeather);
+        weatherPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tb = new Intent (ProfileActivity.this, WeatherForecast.class);
                 startActivity(tb);
             }
         });

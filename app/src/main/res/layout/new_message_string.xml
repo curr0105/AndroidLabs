@@ -4,10 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/msgicon"
+        android:src="@drawable/customs_officer_40"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/new_message"/>
+        android:text="@string/new_message"
+        android:textSize="20sp"/>
 
     <EditText android:id="@+id/view_edit_text"
         android:layout_width="match_parent"

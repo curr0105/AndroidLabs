@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lab 6 - English</string>
+    <!--Manifest-->
+    <string name="app_name">Lab 7 - Default</string>
+
+    <!--prev Labs
     <string name="hello_message">Here are my widgets:</string>
     <string name="button">BUTTON</string>
     <string name="checkBox">Check this out!</string>
     <string name="switchToggle">Switch on / off</string>
     <string name="hint">Type your answer here</string>
     <string name="flag">Canadian flag</string>
+    -->
+
+    <!--not used
+    <string name="search">Search</string>
+    <string name="view_edit_text">Type here</string>
+    <string name="go_back">Go Back</string>
+    -->
+
+    <!--Activity Login-->
     <string name="email_address">Enter your email address:</string>
     <string name="hint_email">Type email here</string>
     <string name="password">Type your password:</string>
+
+    <!--Profile Activity-->
     <string name="your_profile">Your profile</string>
     <string name="your_name">Your name:</string>
     <string name="hint_your_name">Enter your name</string>
@@ -19,17 +33,28 @@
     <string name="click_take_pic">Click the button above to take a picture</string>
     <string name="login_button">LOGIN</string>
     <string name="GoToChatButton">Go to Chat</string>
+    <string name="goToToolBar">Go to Toolbar page</string>
+
+    <!--Chatroom Activity-->
     <string name="SendButton">Send</string>
     <string name="ReceiveButton">Receive</string>
     <string name="ChatTypeHere">Type here</string>
 
+    <!--Menu-->
     <string name="arrivals">Arrivals</string>
     <string name="departures">Departures</string>
     <string name="airports">Airports</string>
-    <string name="search">Search</string>
     <string name="flights">Flights</string>
-    <string name="goToToolBar">Go to Toolbar page</string>
-    <string name="new_message">"What is your new message?"</string>
-    <string name="view_edit_text">Type here</string>
+
+    <!--new Message String-->
+    <string name="new_message">" What is your new message?"</string>
+
+    <!--WeatherForecast-->
+    <string name="goToWeather">Go To Weather</string>
+    <!-- %1$s is for changing the 1st string that you find -->
+    <string name="currTemp">Current Temp: %1$s</string>
+    <string name="minTemp">Minimum Temp: %1$s</string>
+    <string name="maxTemp">Maximum Temp: %1$s</string>
+    <string name="uvRating">UV Rating: %1$s </string>
 
 </resources>

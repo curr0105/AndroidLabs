@@ -13,8 +13,8 @@ import android.content.Intent;
 public class MainActivity extends AppCompatActivity {
 
 
-    SharedPreferences sp;
-    EditText email;
+    private SharedPreferences sp;
+    private EditText email;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
 
     @Override
@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        int i = 0;
-        i++;
+//        int i = 0;
+//        i++;
         //if request code is 2, then we are coming back from ProfileActivity
         if(requestCode == 2){
             EditText et = findViewById(R.id.thisEmailIsPassedToPage2);

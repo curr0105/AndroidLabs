@@ -1,19 +1,16 @@
 package com.example.androidlabs;
 
 import android.app.Activity;
-import android.database.Cursor;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class MyDatabaseOpenHelper extends SQLiteOpenHelper{
     private static final String DATABASE_NAME = "CST2335";
     //any time you make any changes to the database, change the version number to get rid of any bugs
-    private static final int VERSION_NUM = 2;
+    private static final int VERSION_NUM = 3;
     public static final String TABLE_NAME = "MyMessages";
     public static final String COL_ID = "_id";
     public static final String COL_TYPE = "type";
