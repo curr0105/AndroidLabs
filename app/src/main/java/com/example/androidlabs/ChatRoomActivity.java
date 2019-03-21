@@ -49,6 +49,9 @@ public class ChatRoomActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.editText);
         Button receive = findViewById(R.id.ReceiveButton);
 
+        //check if the FrameLayout is loaded
+        boolean isTablet = findViewById(R.id.fragmentLocation) != null;
+
         //get a database:
         //to make sure database is created check adb shell --> /data/data/com.example.androidlabs/databases
         myDb = new MyDatabaseOpenHelper(this);
@@ -105,7 +108,7 @@ public class ChatRoomActivity extends AppCompatActivity {
     }
     //This class needs 4 functions to work properly (use Ctrl + O to see them all):
     //ArrayAdapter -- used by Android to treat a result set uniformly so that it can be
-    // displayed in a UI element. It stores the data in a list
+    //displayed in a UI element. It stores the data in a list
     //This adapter is being dropped inside the Listview
     class ChatRoomAdapter extends ArrayAdapter<String> {
 
