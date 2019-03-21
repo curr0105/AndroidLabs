@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         this.setTitle("Lab 6 - Login");
 
         email = findViewById(R.id.thisEmailIsPassedToPage2);
-        sp = getSharedPreferences("Lab3", Context.MODE_PRIVATE);
+        sp = getSharedPreferences("Lab7", Context.MODE_PRIVATE);
         String savedString = sp.getString("Email","");
         email.setText(savedString);
         //Log.e(ACTIVITY_NAME, "In Function onCreate() in MainActivity:");
